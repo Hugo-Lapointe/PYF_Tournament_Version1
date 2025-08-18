@@ -58,7 +58,7 @@ export default function Landing() {
             >
               <Link
                 to="/standings"
-                className="bg-slate-800 hover:bg-[#016aa3] transition-colors px-10 py-4 rounded text-lg shadow-lg secondary"
+                className="bg-slate-800 hover:bg-[#016aa3] transition-colors px-10 py-4 rounded text-lg shadow-lg"
               >
                 Go to schedule
               </Link>
@@ -80,7 +80,7 @@ export default function Landing() {
                 href="https://www.twitch.tv/pyfesports"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#9146FF] hover:bg-[#7a39d5] px-6 py-3 rounded-lg text-white font-semibold shadow-md transition secondary"
+                className="inline-block bg-[#9146FF] hover:bg-[#7a39d5] px-6 py-3 rounded-lg text-white font-semibold shadow-md transition"
               >
                 Watch Now on Twitch
               </a>

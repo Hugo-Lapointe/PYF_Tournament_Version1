@@ -48,11 +48,6 @@ const Navbar = () => {
                 Teams
               </li>
             </Link>
-            <Link to="/players" onClick={closeMobileMenu}>
-              <li className="my-4 py-4 hover:bg-slate-800 transition-colors duration-200">
-                Players
-              </li>
-            </Link>
             <Link to="/standings" onClick={closeMobileMenu}>
               <li className="my-4 py-4 hover:bg-slate-800 transition-colors duration-200">
                 Schedule

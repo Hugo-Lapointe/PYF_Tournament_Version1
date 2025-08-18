@@ -73,16 +73,16 @@ export default function Teams() {
         transition={{ duration: 0.3 }}
         className="relative p-6 py-16 max-w-6xl mx-auto z-20 text-white"
       >
-        <h1 className="text-3xl font-bold mb-8 text-center text-[#1E6091]">Teams</h1>
+        <h1 className="text-3xl font-bold mb-12 text-center text-[#1E6091]">Teams</h1>
 
         {teams.length === 0 ? (
-          <p className="text-gray-400 text-center">No teams available.</p>
+          <p className="text-white text-center">No teams available.</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {teams.map(team => (
               <motion.div
                 key={team.id}
-                className="bg-slate-800/50 rounded-lg p-6 shadow-lg flex flex-col items-center"
+                className="bg-white/10 backdrop-blur-md rounded-lg p-6 shadow-lg flex flex-col items-center"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
@@ -103,7 +103,7 @@ export default function Teams() {
                 </div>
 
                 {/* Team Name */}
-                <h2 className="text-2xl font-semibold mb-4 text-center">{team.name}</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-center text-slate-900">{team.name}</h2>
 
                 {/* Players */}
                 <div className="flex flex-col items-center gap-4">
@@ -113,7 +113,7 @@ export default function Teams() {
                       .map(playerId => {
                         const player = playersMap[playerId];
                         if (!player) return (
-                          <span key={playerId} className="text-gray-400">
+                          <span key={playerId} className="text-[#1E6091]">
                             Unknown Player
                           </span>
                         );
@@ -124,7 +124,7 @@ export default function Teams() {
                           <Link
                             key={player.id}
                             to={`/players/${player.id}`}
-                            className="flex flex-col items-center gap-2 hover:text-gray-300 no-underline"
+                            className="flex flex-col items-center gap-2 hover:text-slate-900 no-underline text-[#1E6091]"
                           >
                             {player.imageFilename ? (
                               <img

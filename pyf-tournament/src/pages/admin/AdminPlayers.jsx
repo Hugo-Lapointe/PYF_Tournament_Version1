@@ -15,6 +15,10 @@ export default function AdminPlayers() {
   const [valorantCurrentRank, setValorantCurrentRank] = useState("");
   const [valorantPeakRank, setValorantPeakRank] = useState("");
   const [imageFilename, setImageFilename] = useState("");
+  const [kda, setKda] = useState("");
+  const [hsPercent, setHsPercent] = useState("");
+  const [knifeKills, setKnifeKills] = useState("");
+  const [acs, setAcs] = useState("");
 
   // Expanded players accordion state
   const [expandedPlayers, setExpandedPlayers] = useState({});
@@ -47,8 +51,13 @@ export default function AdminPlayers() {
       valorantCurrentRank: valorantCurrentRank.trim() || null,
       valorantPeakRank: valorantPeakRank.trim() || null,
       imageFilename: imageFilename.trim() || null,
+      kda: kda.trim() || null,
+      hsPercent: hsPercent.trim() || null,
+      knifeKills: knifeKills.trim() || null,
+      acs: acs.trim() || null,
     });
 
+    // Reset modal fields
     setDisplayName("");
     setEmail("");
     setDiscordName("");
@@ -56,6 +65,10 @@ export default function AdminPlayers() {
     setValorantCurrentRank("");
     setValorantPeakRank("");
     setImageFilename("");
+    setKda("");
+    setHsPercent("");
+    setKnifeKills("");
+    setAcs("");
     setModalOpen(false);
     fetchPlayers();
   };
@@ -163,6 +176,7 @@ export default function AdminPlayers() {
                 <div className="mt-2 text-gray-300 space-y-1">
                   {editingPlayerId === player.id ? (
                     <>
+                      {/* Editable fields */}
                       <input
                         type="text"
                         placeholder="Display Name"
@@ -212,6 +226,37 @@ export default function AdminPlayers() {
                         onChange={(e) => handleEditChange("imageFilename", e.target.value)}
                         className="w-full p-2 border rounded bg-slate-900"
                       />
+
+                      {/* Stats Fields */}
+                      <input
+                        type="text"
+                        placeholder="KDA"
+                        value={editingPlayerData.kda || ""}
+                        onChange={(e) => handleEditChange("kda", e.target.value)}
+                        className="w-full p-2 border rounded bg-slate-900"
+                      />
+                      <input
+                        type="text"
+                        placeholder="HS% (Headshot %)"
+                        value={editingPlayerData.hsPercent || ""}
+                        onChange={(e) => handleEditChange("hsPercent", e.target.value)}
+                        className="w-full p-2 border rounded bg-slate-900"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Knife Kills"
+                        value={editingPlayerData.knifeKills || ""}
+                        onChange={(e) => handleEditChange("knifeKills", e.target.value)}
+                        className="w-full p-2 border rounded bg-slate-900"
+                      />
+                      <input
+                        type="text"
+                        placeholder="ACS"
+                        value={editingPlayerData.acs || ""}
+                        onChange={(e) => handleEditChange("acs", e.target.value)}
+                        className="w-full p-2 border rounded bg-slate-900"
+                      />
+
                       <div className="flex space-x-3 mt-2">
                         <button
                           onClick={saveEditing}
@@ -229,11 +274,19 @@ export default function AdminPlayers() {
                     </>
                   ) : (
                     <>
+                      {/* Display fields */}
                       <p><strong>Email:</strong> {player.email || "N/A"}</p>
                       <p><strong>Discord:</strong> {player.discordName || "N/A"}</p>
                       <p><strong>Game Name:</strong> {player.gameName}</p>
                       <p><strong>Current Rank:</strong> {player.valorantCurrentRank || "N/A"}</p>
                       <p><strong>Peak Rank:</strong> {player.valorantPeakRank || "N/A"}</p>
+
+                      {/* Stats display */}
+                      <p><strong>KDA:</strong> {player.kda || "N/A"}</p>
+                      <p><strong>HS%:</strong> {player.hsPercent || "N/A"}</p>
+                      <p><strong>Knife Kills:</strong> {player.knifeKills || "N/A"}</p>
+                      <p><strong>ACS:</strong> {player.acs || "N/A"}</p>
+
                       <div className="flex space-x-3 mt-2">
                         <button
                           onClick={() => startEditing(player)}
@@ -313,6 +366,37 @@ export default function AdminPlayers() {
                 onChange={(e) => setImageFilename(e.target.value)}
                 className="w-full p-2 border rounded"
               />
+
+              {/* Stats fields in create modal */}
+              <input
+                type="text"
+                placeholder="KDA"
+                value={kda}
+                onChange={(e) => setKda(e.target.value)}
+                className="w-full p-2 border rounded"
+              />
+              <input
+                type="text"
+                placeholder="HS% (Headshot %)"
+                value={hsPercent}
+                onChange={(e) => setHsPercent(e.target.value)}
+                className="w-full p-2 border rounded"
+              />
+              <input
+                type="text"
+                placeholder="Knife Kills"
+                value={knifeKills}
+                onChange={(e) => setKnifeKills(e.target.value)}
+                className="w-full p-2 border rounded"
+              />
+              <input
+                type="text"
+                placeholder="ACS"
+                value={acs}
+                onChange={(e) => setAcs(e.target.value)}
+                className="w-full p-2 border rounded"
+              />
+
               <div className="flex justify-end space-x-3 mt-4">
                 <button
                   type="button"

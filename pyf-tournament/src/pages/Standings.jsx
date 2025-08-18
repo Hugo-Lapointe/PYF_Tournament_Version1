@@ -31,8 +31,8 @@ export default function Schedule() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
           {/* Round Robin */}
-          <div className="bg-slate-800/80 rounded-xl shadow-lg p-4 py-6 flex flex-col items-center gap-4">
-            <h2 className="text-2xl font-semibold text-white mb-2">Round Robin</h2>
+          <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 py-6 flex flex-col items-center gap-4">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-2">Round Robin</h2>
             <img
               src="/images/round_robin.png"
               alt="Round Robin Schedule"
@@ -41,8 +41,8 @@ export default function Schedule() {
           </div>
 
           {/* Playoffs */}
-          <div className="bg-slate-800/80 rounded-xl shadow-lg p-4 py-6 flex flex-col items-center gap-4">
-            <h2 className="text-2xl font-semibold text-white mb-2">Playoffs</h2>
+          <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-4 py-6 flex flex-col items-center gap-4">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-2">Playoffs</h2>
             <img
               src="/images/playoffs.png"
               alt="Playoffs Schedule"

@@ -100,7 +100,7 @@ export default function Results() {
                           No Logo
                         </div>
                       )}
-                      <span className="text-lg font-medium text-[#1E6091]">{team1.name}</span>
+                      <span className="text-lg font-medium text-slate-900">{team1.name}</span>
                     </div>
 
                     {/* Score + Map + Date */}
@@ -125,7 +125,7 @@ export default function Results() {
                           No Logo
                         </div>
                       )}
-                      <span className="text-lg font-medium text-[#1E6091]">{team2.name}</span>
+                      <span className="text-lg font-medium text-slate-900">{team2.name}</span>
                     </div>
                   </motion.div>
                 </div>

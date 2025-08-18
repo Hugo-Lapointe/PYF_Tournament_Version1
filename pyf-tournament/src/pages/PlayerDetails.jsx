@@ -69,13 +69,34 @@ export default function PlayerDetails() {
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.3 }}
       >
-        {/* Page Title */}
-        <h1 className="text-4xl font-bold text-center text-[#1E6091] drop-shadow-lg mb-8">
-          Player Details
-        </h1>
+        {/* Top area: Back button + Title */}
+        <div className="relative mb-8 px-4 flex flex-col items-center">
+          <h1 className="text-4xl font-bold text-center text-[#1E6091] drop-shadow-lg">
+            Player Details
+          </h1>
 
-        <div className="bg-slate-900/60 rounded-xl shadow-2xl p-8 space-y-10">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div className="mt-4 sm:hidden">
+            <Link
+              to="/teams"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium"
+            >
+              Back to Teams
+            </Link>
+          </div>
+
+          <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden sm:block">
+            <Link
+              to="/teams"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium z-30"
+            >
+              Back to Teams
+            </Link>
+          </div>
+        </div>
+
+        {/* Player Card */}
+        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-2xl p-8 space-y-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             {/* Player Image */}
             <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden bg-gray-700 flex-shrink-0 border-4 border-gray-600">
               {player.imageFilename ? (
@@ -92,52 +113,63 @@ export default function PlayerDetails() {
             </div>
 
             {/* Player Info */}
-            <div className="flex-1 space-y-4 text-center md:text-left">
-              <h2 className="text-4xl font-bold flex items-center justify-center md:justify-start gap-3">
+            <div className="flex-1 space-y-3 text-left">
+              <h2 className="text-4xl font-bold flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-start gap-3 text-slate-900 text-center sm:text-left">
                 {player.displayName}
                 {isCaptain && (
-                  <span className="bg-yellow-400 text-black px-3 py-1 rounded text-sm font-semibold">
+                  <span className="bg-yellow-400 text-black px-3 py-1 rounded text-sm font-semibold text-[#1E6091]">
                     Captain
                   </span>
                 )}
               </h2>
 
-              <p className="text-lg">
-                <strong>Current Team: </strong>
-                {team ? team.name : "N/A"}
+              <p className="text-lg text-[#1E6091]">
+                <strong>Current Team:</strong>{" "}
+                <span className="text-slate-900">{team ? team.name : "N/A"}</span>
               </p>
-
-              <p className="text-lg">
-                <strong>In Game Name:</strong> {player.gameName || "N/A"}
+              <p className="text-lg text-[#1E6091]">
+                <strong>In Game Name:</strong>{" "}
+                <span className="text-slate-900">{player.gameName || "N/A"}</span>
               </p>
-
-              <p className="text-lg">
-                <strong>Current Rank:</strong> {player.valorantCurrentRank || "N/A"}
+              <p className="text-lg text-[#1E6091]">
+                <strong>Current Rank:</strong>{" "}
+                <span className="text-slate-900">{player.valorantCurrentRank || "N/A"}</span>
               </p>
-
-              <p className="text-lg">
-                <strong>Peak Rank:</strong> {player.valorantPeakRank || "N/A"}
+              <p className="text-lg text-[#1E6091]">
+                <strong>Peak Rank:</strong>{" "}
+                <span className="text-slate-900">{player.valorantPeakRank || "N/A"}</span>
               </p>
-
-              <p className="text-lg">
-                <strong>Discord Name:</strong> {player.discordName || "N/A"}
-              </p>
-
               {player.age && (
-                <p className="text-lg">
-                  <strong>Age:</strong> {player.age}
+                <p className="text-lg text-[#1E6091]">
+                  <strong>Age:</strong> <span className="text-slate-900">{player.age}</span>
                 </p>
               )}
             </div>
           </div>
 
-          <div className="mt-6 text-center md:text-left">
-            <Link
-              to="/teams"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium"
-            >
-              Back to Teams
-            </Link>
+          {/* Player Stats - full width under image/info */}
+          <div className="w-full mt-6">
+            <h3 className="text-2xl font-semibold text-slate-900 mb-4 text-center text-[#1E6091]">
+              Stats
+            </h3>
+            <div className="flex justify-between bg-white/20 p-4 rounded-xl text-center text-lg text-slate-900">
+              <div className="flex-1">
+                <p className="font-semibold text-[#1E6091]">KDA</p>
+                <p>{player.kda || "N/A"}</p>
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-[#1E6091]">HS%</p>
+                <p>{player.hsPercent || "N/A"}</p>
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-[#1E6091]">Knife Kills</p>
+                <p>{player.knifeKills || "N/A"}</p>
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-[#1E6091]">ACS</p>
+                <p>{player.acs || "N/A"}</p>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
