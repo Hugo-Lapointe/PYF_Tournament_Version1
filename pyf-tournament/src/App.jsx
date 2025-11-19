@@ -9,6 +9,7 @@ import PlayerDetails from "./pages/PlayerDetails";
 import Standings from "./pages/Standings";
 import Results from "./pages/Results";
 import Rules from "./pages/Rules";
+import About from "./pages/About";
 
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -37,6 +38,7 @@ function AnimatedRoutes() {
         <Route path="/standings" element={<Standings />} />
         <Route path="/results" element={<Results />} />
         <Route path="/rules" element={<Rules />} />
+        <Route path="/about" element={<About />} />
 
         {/* Admin login */}
         <Route path="/admin-login" element={<AdminLogin />} />
