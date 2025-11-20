@@ -10,6 +10,14 @@ import Standings from "./pages/Standings";
 import Results from "./pages/Results";
 import Rules from "./pages/Rules";
 import About from "./pages/About";
+import Overview from "./pages/Overview";
+import Roadmap from "./pages/Roadmap";
+import Stats from "./pages/Stats";
+import Signups from "./pages/SignUps";
+import Live from "./pages/Live";
+import MeetTheTeam from "./pages/MeetTheTeam";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
 
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -39,6 +47,14 @@ function AnimatedRoutes() {
         <Route path="/results" element={<Results />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/about" element={<About />} />
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/roadmap" element={<Roadmap />} />
+        <Route path="/stats" element={<Stats />} />
+        <Route path="/signups" element={<Signups />} />
+        <Route path="/live" element={<Live />} />
+        <Route path="/meettheteam" element={<MeetTheTeam />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Admin login */}
         <Route path="/admin-login" element={<AdminLogin />} />

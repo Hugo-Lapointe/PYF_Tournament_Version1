@@ -1,0 +1,115 @@
+import React from "react";
+import { motion } from "framer-motion";
+import BackgroundVideoLayout from "../components/BackgroundVideoLayout";
+import { FaDiscord, FaEnvelope, FaGlobe } from "react-icons/fa";
+
+const Contact = () => {
+  return (
+    <BackgroundVideoLayout>
+      <div className="text-white px-6 pt-20">
+
+        {/* HERO */}
+        <section className="relative w-full h-[55vh] flex items-center justify-center overflow-hidden">
+          <img
+            src="/images/valorant_banner.jpg"
+            alt="Contact Banner"
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative z-10 text-center px-6"
+          >
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
+              Contact <span className="text-[#017bbd]">Us</span>
+            </h1>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+              Have questions, need support, or want to connect? Reach out via Discord or email.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* Contact Info Cards */}
+        <section className="py-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-slate-800/60 backdrop-blur-md rounded-2xl p-8 shadow-xl text-center hover:scale-[1.03] transition"
+          >
+            <FaDiscord className="text-6xl text-[#7289da] mx-auto mb-4" />
+            <h3 className="text-2xl font-semibold text-[#017bbd] mb-2">Discord</h3>
+            <p className="text-gray-300 mb-4">Join our community server for sign-ups, support, and live chat.</p>
+            <a
+              href="https://discord.gg/YOURDISCORDLINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl font-semibold text-white transition"
+            >
+              Join Discord
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+            className="bg-slate-800/60 backdrop-blur-md rounded-2xl p-8 shadow-xl text-center hover:scale-[1.03] transition"
+          >
+            <FaEnvelope className="text-6xl text-[#017bbd] mx-auto mb-4" />
+            <h3 className="text-2xl font-semibold text-[#017bbd] mb-2">Email</h3>
+            <p className="text-gray-300 mb-4">Contact us directly for support or inquiries.</p>
+            <a
+              href="mailto:contact@pyfesports.com"
+              className="inline-block px-8 py-3 bg-[#017bbd] hover:bg-[#0194e4] rounded-xl font-semibold text-white transition"
+            >
+              Send Email
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-slate-800/60 backdrop-blur-md rounded-2xl p-8 shadow-xl text-center hover:scale-[1.03] transition"
+          >
+            <FaGlobe className="text-6xl text-[#017bbd] mx-auto mb-4" />
+            <h3 className="text-2xl font-semibold text-[#017bbd] mb-2">Website</h3>
+            <p className="text-gray-300 mb-4">Find schedules, stats, and all league information on our site.</p>
+            <a
+              href="/"
+              className="inline-block px-8 py-3 bg-[#017bbd] hover:bg-[#0194e4] rounded-xl font-semibold text-white transition"
+            >
+              Visit Site
+            </a>
+          </motion.div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-24 text-center bg-slate-800/40">
+          <h2 className="text-4xl font-extrabold mb-6">
+            Need <span className="text-[#017bbd]">Assistance?</span>
+          </h2>
+          <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
+            Our team is here to help. Whether it’s technical support, questions about rules, or general inquiries, reach out through Discord or email.
+          </p>
+          <a
+            href="https://discord.gg/YOURDISCORDLINK"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-4 bg-[#017bbd] hover:bg-[#0194e4] transition rounded-xl text-xl font-bold"
+          >
+            Join Our Discord
+          </a>
+        </section>
+
+      </div>
+    </BackgroundVideoLayout>
+  );
+};
+
+export default Contact;

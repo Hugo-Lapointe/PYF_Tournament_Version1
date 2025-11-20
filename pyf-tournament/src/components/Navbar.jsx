@@ -28,7 +28,7 @@ export default function Navbar() {
       name: "About",
       links: [
         { label: "About", to: "/about" },
-        { label: "Meet the Team", to: "/team" },
+        { label: "Meet the Team", to: "/meettheteam" },
         { label: "Rules", to: "/rules" },
         { label: "FAQ", to: "/faq" },
         { label: "Contact / Discord", to: "/contact" },
