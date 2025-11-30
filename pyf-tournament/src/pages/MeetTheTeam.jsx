@@ -47,7 +47,7 @@ const MeetTheTeam = () => {
             transition={{ duration: 0.7 }}
             className="relative z-10 text-center px-6"
           >
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
+            <h1 className="text-5xl md:text-6xl mb-4 tracking-wide">
               Meet the <span className="text-slate-900">Team</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-[#1E6091]">
