@@ -34,7 +34,7 @@ export default function Landing() {
           {/* =============================== */}
           <div className="flex flex-col items-center text-center max-w-4xl w-full mb-24">
             <motion.h1
-              className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg text-[#1E6091]"
+              className="text-4xl md:text-6xl mb-6 drop-shadow-lg text-[#1E6091]"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.4 }}
@@ -48,7 +48,7 @@ export default function Landing() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.4 }}
             >
-              A competitive space for collegiate and community teams to clash, compete, and dominate.
+              A friendly competitive space for collegiate, community teams and solo players to clash, compete, and dominate.
             </motion.p>
 
             <Link
@@ -79,6 +79,8 @@ export default function Landing() {
             </Link>
           </div>
 
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+
           {/* =============================== */}
           {/*       UPCOMING MATCHES PREVIEW  */}
           {/* =============================== */}
@@ -92,8 +94,8 @@ export default function Landing() {
                   key={i}
                   className="bg-slate-900/70 backdrop-blur-md border border-blue-900 p-6 rounded-xl shadow-lg"
                 >
-                  <h3 className="font-bold text-xl text-white mb-2">Team A vs Team B</h3>
-                  <p className="text-[#1E6091]">Friday — 8:00 PM EST</p>
+                  <h3 className="text-xl text-white mb-2">TBD vs TBD</h3>
+                  <p className="text-blue-400 font-semibold font-sans font-light">Friday — 8:00 PM EST</p>
                   <Link
                     to="/matches"
                     className="inline-block mt-4 text-blue-400 hover:text-blue-300 underline"
@@ -114,6 +116,8 @@ export default function Landing() {
             </div>
           </section>
 
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+
           {/* =============================== */}
           {/*        STANDINGS PREVIEW        */}
           {/* =============================== */}
@@ -122,17 +126,17 @@ export default function Landing() {
 
             <div className="bg-slate-900/70 backdrop-blur-md p-6 rounded-xl shadow-lg">
               <ul className="space-y-3">
-                <li className="flex justify-between text-[#1E6091]">
-                  <span>1. Team Alpha</span>
-                  <span>12 - 2</span>
+                <li className="flex justify-between text-blue-400 hover:text-blue-300">
+                  <span className="text-blue-400 hover:text-blue-300">1. Team Alpha</span>
+                  <span className="text-white">12 - 2</span>
                 </li>
-                <li className="flex justify-between text-[#1E6091]">
-                  <span>2. Team Blaze</span>
-                  <span>11 - 3</span>
+                <li className="flex justify-between">
+                  <span className="text-blue-400 hover:text-blue-300">2. Team Blaze</span>
+                  <span className="text-white">11 - 3</span>
                 </li>
-                <li className="flex justify-between text-[#1E6091]">
-                  <span>3. Team Frost</span>
-                  <span>9 - 5</span>
+                <li className="flex justify-between text-blue-400 hover:text-blue-300">
+                  <span className="text-blue-400 hover:text-blue-300">3. Team Frost</span>
+                  <span className="text-white">9 - 5</span>
                 </li>
               </ul>
 
@@ -147,6 +151,8 @@ export default function Landing() {
             </div>
           </section>
 
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+
           {/* =============================== */}
           {/*       STATS CENTRAL PREVIEW     */}
           {/* =============================== */}
@@ -159,8 +165,8 @@ export default function Landing() {
                   key={index}
                   className="bg-slate-900/70 backdrop-blur-md border border-blue-900 p-6 rounded-xl shadow-lg text-center"
                 >
-                  <h3 className="text-white font-bold text-xl mb-2">{title}</h3>
-                  <p className="text-[#1E6091]">Player XYZ</p>
+                  <h3 className="text-white text-xl mb-2">{title}</h3>
+                  <p  className="text-blue-400 hover:text-blue-300">N/A</p>
                 </div>
               ))}
             </div>
@@ -175,6 +181,8 @@ export default function Landing() {
             </div>
           </section>
 
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+
           {/* =============================== */}
           {/*         MINi ROADMAP            */}
           {/* =============================== */}
@@ -182,10 +190,10 @@ export default function Landing() {
             <h2 className="text-3xl text-[#1E6091] mb-6">Season Progress</h2>
 
             <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
-              <div className="h-full bg-blue-700" style={{ width: "40%" }}></div>
+              <div className="h-full bg-blue-400" style={{ width: "10%" }}></div>
             </div>
 
-            <p className="text-[#1E6091] mt-4">Currently in: Week 3 — Regular Season</p>
+            <p className="text-[#1E6091] mt-4">Currently in: PHASE 1 — TESTS</p>
 
             <Link
               to="/roadmap"
@@ -194,6 +202,8 @@ export default function Landing() {
               View Full Roadmap
             </Link>
           </section>
+
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
 
           {/* =============================== */}
           {/*          RULES TEASER           */}
@@ -212,6 +222,8 @@ export default function Landing() {
             </Link>
           </section>
 
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+
           {/* =============================== */}
           {/*      MEET THE TEAM PREVIEW      */}
           {/* =============================== */}
@@ -219,17 +231,17 @@ export default function Landing() {
             <h2 className="text-3xl text-center text-[#1E6091] mb-12">Meet The Admins</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {["Hugo", "Admin 2", "Admin 3"].map((name, i) => (
+              {["TWYL", "RAPID", "MISO"].map((name, i) => (
                 <div
                   key={i}
                   className="bg-slate-900/70 backdrop-blur-md p-6 rounded-xl shadow-lg text-center"
                 >
                   <img
                     src="/images/default_pfp.png"
-                    alt="staff"
+                    alt=""
                     className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border border-blue-800"
                   />
-                  <h3 className="text-white font-bold text-xl">{name}</h3>
+                  <h3 className="text-white text-xl">{name}</h3>
                 </div>
               ))}
             </div>
@@ -244,6 +256,8 @@ export default function Landing() {
             </div>
           </section>
 
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+
           {/* =============================== */}
           {/*     CONTACT / DISCORD SECTION   */}
           {/* =============================== */}
@@ -254,7 +268,7 @@ export default function Landing() {
             <a
               href="https://discord.gg/"
               target="_blank"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded text-white font-semibold shadow-md"
+              className="inline-block bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded text-white shadow-md"
             >
               Join the Discord
             </a>
