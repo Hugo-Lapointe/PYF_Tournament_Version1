@@ -3,6 +3,21 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import GlowingBalls from "../components/GlowingBalls";
 
+const teamMembers = [
+  {
+    name: "TWYL",
+    img: "/images/phoques/TWYL.png",
+  },
+  {
+    name: "RAPID",
+    img: "/images/phoques/Rapid.png",
+  },
+  {
+    name: "MISO",
+    img: "/images/phoques/anon.png",
+  },
+];
+
 export default function Landing() {
   return (
     <>
@@ -231,24 +246,24 @@ export default function Landing() {
             <h2 className="text-3xl text-center text-slate-900 mb-12">Meet The Admins</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {["TWYL", "RAPID", "MISO"].map((name, i) => (
+              {teamMembers.map((member, i) => (
                 <div
                   key={i}
                   className="bg-slate-900/70 backdrop-blur-md p-6 rounded-xl shadow-lg text-center"
                 >
                   <img
-                    src="/images/default_pfp.png"
-                    alt=""
+                    src={member.img}
+                    alt={member.name}
                     className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border border-blue-800"
                   />
-                  <h3 className="text-white text-xl">{name}</h3>
+                  <h3 className="text-white text-xl">{member.name}</h3>
                 </div>
               ))}
             </div>
 
             <div className="text-center mt-8">
               <Link
-                to="/team"
+                to="/meettheteam"
                 className="bg-slate-800 hover:bg-[#016aa3] px-6 py-3 rounded shadow"
               >
                 Full Staff Page
