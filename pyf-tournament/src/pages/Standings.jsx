@@ -27,15 +27,10 @@ const getBadgeColor = (rank) => {
 const Standings = () => {
   return (
     <BackgroundVideoLayout>
-      <div className="text-white px-6 pt-20">
+      <div className="text-[#017bbd]">
 
         {/* HERO */}
-        <section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden">
-          <img
-            src="/images/valorant_banner.jpg"
-            alt="Standings Banner"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
-          />
+        <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,25 +38,30 @@ const Standings = () => {
             className="relative z-10 text-center px-6"
           >
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
-              League <span className="text-[#017bbd]">Standings</span>
+              League <span className="text-slate-900">Standings</span>
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+            <p className="text-lg md:text-xl max-w-2xl mx-auto">
               Check out the top teams and follow your favorite squads this season.
             </p>
           </motion.div>
         </section>
 
+        {/* Divider */}
+        <div className="flex justify-center">
+            <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+        </div>
+
         {/* TABLE */}
-        <section className="py-20">
+        <section className="pb-20">
           <div className="max-w-6xl mx-auto overflow-x-auto rounded-2xl shadow-xl bg-slate-800/60 backdrop-blur-md">
             <table className="min-w-full divide-y divide-gray-700">
               <thead className="bg-slate-900/80">
                 <tr>
-                  <th className="px-6 py-4 text-left text-lg font-semibold text-gray-300">Rank</th>
-                  <th className="px-6 py-4 text-left text-lg font-semibold text-gray-300">Team</th>
-                  <th className="px-6 py-4 text-center text-lg font-semibold text-gray-300">Wins</th>
-                  <th className="px-6 py-4 text-center text-lg font-semibold text-gray-300">Losses</th>
-                  <th className="px-6 py-4 text-center text-lg font-semibold text-gray-300">Points</th>
+                  <th className="px-6 py-4 text-left text-lg text-gray-300">Rank</th>
+                  <th className="px-6 py-4 text-left text-lg text-gray-300">Team</th>
+                  <th className="px-6 py-4 text-center text-lg text-gray-300">Wins</th>
+                  <th className="px-6 py-4 text-center text-lg text-gray-300">Losses</th>
+                  <th className="px-6 py-4 text-center text-lg text-gray-300">Points</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-700">
@@ -75,14 +75,14 @@ const Standings = () => {
                     className="hover:bg-slate-700/40 transition"
                   >
                     <td className="px-6 py-4">
-                      <span className={`px-3 py-1 rounded-full font-semibold ${getBadgeColor(team.rank)}`}>
+                      <span className={`px-3 py-1 rounded-full ${getBadgeColor(team.rank)}`}>
                         {team.rank}
                       </span>
                     </td>
-                    <td className="px-6 py-4">{team.team}</td>
-                    <td className="px-6 py-4 text-center">{team.wins}</td>
-                    <td className="px-6 py-4 text-center">{team.losses}</td>
-                    <td className="px-6 py-4 text-center">{team.points}</td>
+                    <td className="px-6 py-4 text-blue-400">{team.team}</td>
+                    <td className="px-6 py-4 text-center text-blue-400">{team.wins}</td>
+                    <td className="px-6 py-4 text-center text-blue-400">{team.losses}</td>
+                    <td className="px-6 py-4 text-center text-blue-400">{team.points}</td>
                   </motion.tr>
                 ))}
               </tbody>
@@ -92,15 +92,15 @@ const Standings = () => {
 
         {/* CTA */}
         <section className="py-24 text-center bg-slate-800/40">
-          <h2 className="text-4xl font-extrabold mb-6">
-            Want to See Your Team <span className="text-[#017bbd]">Here?</span>
+          <h2 className="text-4xl mb-6 text-blue-400">
+            Want to See Your Team <span className="text-slate-900">Here?</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
             Sign up and compete in the next season to climb the leaderboard and earn badges!
           </p>
           <a
             href="/signups"
-            className="px-10 py-4 bg-[#017bbd] hover:bg-[#0194e4] transition rounded-xl text-xl font-bold"
+            className="inline-block px-8 py-3 bg-blue-400 hover:bg-[#0194e4] rounded-xl text-white transition"
           >
             Join Now
           </a>
