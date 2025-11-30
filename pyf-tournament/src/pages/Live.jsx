@@ -33,32 +33,27 @@ const liveMatches = [
 const Live = () => {
   return (
     <BackgroundVideoLayout>
-      <div className="text-white px-6 pt-20">
+      <div className="text-[#017bbd]">
 
         {/* HERO */}
-        <section className="relative w-full h-[55vh] flex items-center justify-center overflow-hidden">
-          <img
-            src="/images/valorant_banner.jpg"
-            alt="Live Matches Banner"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
-          />
+        <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative z-10 text-center px-6"
           >
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
-              Live <span className="text-[#017bbd]">Matches</span>
+            <h1 className="text-5xl md:text-6xl mb-4 tracking-wide">
+              Live <span className="text-slate-900">Matches</span>
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+            <p className="text-lg md:text-xl max-w-2xl mx-auto">
               Watch ongoing matches, track scores in real-time, and jump into the action.
             </p>
           </motion.div>
         </section>
 
         {/* LIVE MATCH CARDS */}
-        <section className="py-20 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <section className="pb-20 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {liveMatches.map((match, i) => (
             <motion.div
               key={match.id}
@@ -71,14 +66,14 @@ const Live = () => {
               }`}
             >
               {match.status === "Live" && (
-                <span className="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full font-bold text-sm shadow-lg">
+                <span className="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full text-sm shadow-lg">
                   LIVE
                 </span>
               )}
-              <h3 className="text-2xl font-semibold text-[#017bbd] mb-4 text-center">
-                {match.teamA} vs {match.teamB}
+              <h3 className="text-2xl text-blue-400 mb-4 text-center">
+                {match.teamA}<br /> vs<br /> {match.teamB}
               </h3>
-              <p className="text-gray-300 text-center text-lg font-bold mb-4">
+              <p className="text-gray-300 text-center text-lg mb-4">
                 Score: {match.score}
               </p>
               {match.stream ? (
@@ -86,12 +81,12 @@ const Live = () => {
                   href={match.stream}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-center bg-[#9146FF] hover:bg-[#7a39d5] transition text-white px-6 py-3 rounded-xl font-semibold shadow-md"
+                  className="block text-center bg-[#9146FF] hover:bg-[#7a39d5] transition text-white px-6 py-3 rounded-xl shadow-md"
                 >
                   Watch Stream
                 </a>
               ) : (
-                <p className="text-gray-400 text-center font-medium">No stream yet</p>
+                <p className="text-gray-400 text-center">No stream yet</p>
               )}
             </motion.div>
           ))}
@@ -99,8 +94,8 @@ const Live = () => {
 
         {/* CTA */}
         <section className="py-24 text-center bg-slate-800/40">
-          <h2 className="text-4xl font-extrabold mb-6">
-            Don’t Miss <span className="text-[#017bbd]">The Action</span>
+          <h2 className="text-4xl mb-6 text-blue-400">
+            Don’t Miss <span className="text-slate-900">The Action</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
             Stay tuned for upcoming matches and catch all the live streams directly on our Twitch channel.
@@ -109,7 +104,7 @@ const Live = () => {
             href="https://www.twitch.tv/pyfesports"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 bg-[#017bbd] hover:bg-[#0194e4] transition rounded-xl text-xl font-bold"
+            className="inline-block px-8 py-3 bg-[#9146FF] hover:bg-[#7a39d5] rounded-xl text-white transition"
           >
             Watch All Live
           </a>
