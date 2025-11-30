@@ -65,7 +65,7 @@ export default function Landing() {
           {/*        ABOUT MINI SECTION       */}
           {/* =============================== */}
           <div className="max-w-5xl text-center mb-24 px-4">
-            <h2 className="text-3xl text-[#1E6091] mb-4">What Is The PYF League?</h2>
+            <h2 className="text-3xl text-slate-900 mb-4">What Is The PYF League?</h2>
             <p className="text-[#1E6091] text-lg">
               A competitive Valorant league run by dedicated admins and community members.
               Open to collegiate teams, friends, and players hungry for competitive experience.
@@ -85,7 +85,7 @@ export default function Landing() {
           {/*       UPCOMING MATCHES PREVIEW  */}
           {/* =============================== */}
           <section className="w-full max-w-6xl mb-24 px-4">
-            <h2 className="text-3xl text-center text-[#1E6091] mb-12">Upcoming Matches</h2>
+            <h2 className="text-3xl text-center text-slate-900 mb-12">Upcoming Matches</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card Example — Replace with dynamic data later */}
@@ -122,7 +122,7 @@ export default function Landing() {
           {/*        STANDINGS PREVIEW        */}
           {/* =============================== */}
           <section className="w-full max-w-5xl mb-24 px-4">
-            <h2 className="text-3xl text-center text-[#1E6091] mb-8">Current Standings</h2>
+            <h2 className="text-3xl text-center text-slate-900 mb-8">Current Standings</h2>
 
             <div className="bg-slate-900/70 backdrop-blur-md p-6 rounded-xl shadow-lg">
               <ul className="space-y-3">
@@ -157,7 +157,7 @@ export default function Landing() {
           {/*       STATS CENTRAL PREVIEW     */}
           {/* =============================== */}
           <section className="w-full max-w-6xl mb-24 px-4">
-            <h2 className="text-3xl text-center text-[#1E6091] mb-10">Stats Central</h2>
+            <h2 className="text-3xl text-center text-slate-900 mb-10">Stats Central</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {["Top Fragger", "Highest ACS", "Most Wins"].map((title, index) => (
@@ -187,7 +187,7 @@ export default function Landing() {
           {/*         MINi ROADMAP            */}
           {/* =============================== */}
           <section className="w-full max-w-4xl mb-24 px-4 text-center">
-            <h2 className="text-3xl text-[#1E6091] mb-6">Season Progress</h2>
+            <h2 className="text-3xl text-slate-900 mb-6">Season Progress</h2>
 
             <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div className="h-full bg-blue-400" style={{ width: "10%" }}></div>
@@ -209,7 +209,7 @@ export default function Landing() {
           {/*          RULES TEASER           */}
           {/* =============================== */}
           <section className="w-full max-w-5xl mb-24 text-center px-4">
-            <h2 className="text-3xl text-[#1E6091] mb-4">League Rules</h2>
+            <h2 className="text-3xl text-slate-900 mb-4">League Rules</h2>
             <p className="text-[#1E6091] mb-6">
               Standard competitive ruleset, map pool, match format, and team requirements.
             </p>
@@ -228,7 +228,7 @@ export default function Landing() {
           {/*      MEET THE TEAM PREVIEW      */}
           {/* =============================== */}
           <section className="w-full max-w-6xl mb-24 px-4">
-            <h2 className="text-3xl text-center text-[#1E6091] mb-12">Meet The Admins</h2>
+            <h2 className="text-3xl text-center text-slate-900 mb-12">Meet The Admins</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {["TWYL", "RAPID", "MISO"].map((name, i) => (
@@ -262,7 +262,7 @@ export default function Landing() {
           {/*     CONTACT / DISCORD SECTION   */}
           {/* =============================== */}
           <section className="w-full max-w-4xl text-center px-4 mb-32">
-            <h2 className="text-3xl text-[#1E6091] mb-4">Join the Community</h2>
+            <h2 className="text-3xl text-slate-900 mb-4">Join the Community</h2>
             <p className="text-[#1E6091] mb-6">Stay updated, scrim, talk matches, and get support.</p>
 
             <a

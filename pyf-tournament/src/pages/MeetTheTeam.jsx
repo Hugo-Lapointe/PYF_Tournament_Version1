@@ -5,30 +5,30 @@ import BackgroundVideoLayout from "../components/BackgroundVideoLayout";
 // Sample team data
 const teamMembers = [
   {
-    name: "Hugo Lapointe",
+    name: "TWYL",
     role: "League Founder",
-    img: "/images/team/maxence.jpg",
+    img: "/images/phoques/TWYL.png",
     discord: "https://discordapp.com/users/maxence",
     twitch: "https://www.twitch.tv/maxence",
   },
   {
-    name: "Alex Smith",
+    name: "Rapid",
     role: "Admin & Match Organizer",
-    img: "/images/team/alex.jpg",
+    img: "/images/phoques/Rapid.png",
     discord: "https://discordapp.com/users/alex",
     twitch: "",
   },
   {
-    name: "Sophie Chen",
+    name: "Lupipi",
     role: "Caster & Content Creator",
-    img: "/images/team/sophie.jpg",
+    img: "/images/phoques/Lupipi.png",
     discord: "https://discordapp.com/users/sophie",
     twitch: "https://www.twitch.tv/sophie",
   },
   {
-    name: "Jordan Lee",
+    name: "MiniPeak",
     role: "Community Manager",
-    img: "/images/team/jordan.jpg",
+    img: "/images/phoques/MiniPeak.png",
     discord: "https://discordapp.com/users/jordan",
     twitch: "",
   },
@@ -37,15 +37,10 @@ const teamMembers = [
 const MeetTheTeam = () => {
   return (
     <BackgroundVideoLayout>
-      <div className="text-white px-6 pt-20">
+      <div className="text-[#1E6091]">
 
         {/* HERO */}
-        <section className="relative w-full h-[55vh] flex items-center justify-center overflow-hidden">
-          <img
-            src="/images/valorant_banner.jpg"
-            alt="Meet the Team Banner"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
-          />
+        <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,16 +48,16 @@ const MeetTheTeam = () => {
             className="relative z-10 text-center px-6"
           >
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
-              Meet the <span className="text-[#017bbd]">Team</span>
+              Meet the <span className="text-slate-900">Team</span>
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+            <p className="text-lg md:text-xl max-w-2xl mx-auto text-[#1E6091]">
               The organizers, admins, casters, and community managers who make PYF Valorant League possible.
             </p>
           </motion.div>
         </section>
 
         {/* TEAM CARDS */}
-        <section className="py-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <section className="pb-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {teamMembers.map((member, i) => (
             <motion.div
               key={i}
@@ -78,7 +73,7 @@ const MeetTheTeam = () => {
                 className="w-full h-56 object-cover"
               />
               <div className="p-6 text-center">
-                <h3 className="text-2xl font-semibold text-[#017bbd] mb-2">{member.name}</h3>
+                <h3 className="text-2xl text-blue-400 mb-2">{member.name}</h3>
                 <p className="text-gray-300 mb-4">{member.role}</p>
                 <div className="flex justify-center gap-4">
                   {member.discord && (
@@ -111,8 +106,8 @@ const MeetTheTeam = () => {
 
         {/* CTA */}
         <section className="py-24 text-center bg-slate-800/40">
-          <h2 className="text-4xl font-extrabold mb-6">
-            Want to <span className="text-[#017bbd]">Join the Team?</span>
+          <h2 className="text-4xl text-blue-400 mb-6">
+            Want to <span className="text-slate-900">Join the Team?</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
             We’re always looking for casters, admins, and community managers to help grow the league. Join our Discord to get involved!
@@ -121,7 +116,7 @@ const MeetTheTeam = () => {
             href="https://discord.gg/YOURDISCORDLINK"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 bg-[#017bbd] hover:bg-[#0194e4] transition rounded-xl text-xl font-bold"
+            className="inline-block bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded text-white shadow-md"
           >
             Join Discord
           </a>

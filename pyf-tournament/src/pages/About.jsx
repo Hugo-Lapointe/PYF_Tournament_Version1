@@ -8,7 +8,7 @@ const About = () => {
         <div className="text-white">
 
         {/* HERO SECTION */}
-        <section className="relative w-full h-[55vh] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
             <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
