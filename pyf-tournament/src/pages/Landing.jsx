@@ -266,11 +266,12 @@ export default function Landing() {
             <p className="text-[#1E6091] mb-6">Stay updated, scrim, talk matches, and get support.</p>
 
             <a
-              href="https://discord.gg/"
+              href="https://discord.gg/YOURDISCORDLINK"
               target="_blank"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded text-white shadow-md"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-white transition"
             >
-              Join the Discord
+              Join Discord
             </a>
           </section>
         </motion.div>

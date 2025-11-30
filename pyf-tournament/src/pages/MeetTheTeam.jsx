@@ -116,12 +116,11 @@ const MeetTheTeam = () => {
             href="https://discord.gg/YOURDISCORDLINK"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded text-white shadow-md"
+            className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-white transition"
           >
             Join Discord
           </a>
         </section>
-
       </div>
     </BackgroundVideoLayout>
   );
