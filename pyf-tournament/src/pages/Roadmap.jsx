@@ -5,34 +5,33 @@ import BackgroundVideoLayout from "../components/BackgroundVideoLayout";
 const Roadmap = () => {
   return (
     <BackgroundVideoLayout>
-      <div className="text-white">
+      <div className="text-[#017bbd]">
 
         {/* HERO SECTION */}
-        <section className="relative w-full h-[55vh] flex items-center justify-center overflow-hidden">
-          <img
-            src="/images/valorant_banner.jpg"
-            alt="Roadmap Banner"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
-          />
-
+        <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="relative z-10 text-center px-6"
           >
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
-              League <span className="text-[#017bbd]">Roadmap</span>
+            <h1 className="text-5xl md:text-6xl mb-4 tracking-wide">
+              League <span className="text-slate-900">Roadmap</span>
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+            <p className="text-lg md:text-xl max-w-2xl mx-auto">
               Our vision for upcoming seasons, features, and competitive improvements.
             </p>
           </motion.div>
         </section>
 
+        {/* Divider */}
+        <div className="flex justify-center">
+            <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+        </div>
+
         {/* TIMELINE */}
-        <section className="py-20 px-6 md:px-16 lg:px-32">
-          <h2 className="text-4xl font-bold text-center mb-16">
+        <section className="pb-20 px-6 md:px-16 lg:px-32">
+          <h2 className="text-4xl text-center mb-16">
             Development <span className="text-[#017bbd]">Timeline</span>
           </h2>
 
@@ -83,7 +82,7 @@ const Roadmap = () => {
                 <div
                   className="bg-slate-800/60 backdrop-blur-lg p-8 rounded-2xl shadow-xl w-[90%] md:w-[45%]"
                 >
-                  <h3 className="text-2xl font-semibold text-[#017bbd]">
+                  <h3 className="text-2xl text-blue-400">
                     {item.title}
                   </h3>
                   <p className="text-sm text-gray-400 mt-1 mb-3">{item.date}</p>
@@ -99,8 +98,8 @@ const Roadmap = () => {
 
         {/* CTA */}
         <section className="py-24 text-center bg-slate-800/40">
-          <h2 className="text-4xl font-extrabold mb-6">
-            Be Part of the <span className="text-[#017bbd]">Future</span>
+          <h2 className="text-4xl mb-6 text-blue-400">
+            Be Part of the <span className="text-slate-900">Future</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
             Join now and grow with us as we build the next generation of Valorant competition.
@@ -108,12 +107,11 @@ const Roadmap = () => {
 
           <a
             href="/signups"
-            className="px-10 py-4 bg-[#017bbd] hover:bg-[#0194e4] transition rounded-xl text-xl font-bold"
+            className="inline-block px-8 py-3 bg-blue-400 hover:bg-[#0194e4] rounded-xl text-white transition"
           >
             Sign Up
           </a>
         </section>
-
       </div>
     </BackgroundVideoLayout>
   );
