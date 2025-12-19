@@ -38,7 +38,7 @@ const Contact = () => {
             <h3 className="text-2xl text-[#7289da] mb-2">Discord</h3>
             <p className="text-gray-300 mb-4">Join our community server for sign-ups, support, and live chat.</p>
             <a
-              href="https://discord.gg/YOURDISCORDLINK"
+              href="https://discord.gg/Kzr9sBMC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-white transition"
@@ -58,7 +58,7 @@ const Contact = () => {
             <h3 className="text-2xl text-[#017bbd] mb-2">Email</h3>
             <p className="text-gray-300 mb-4">Contact us directly for support or inquiries.</p>
             <a
-              href="mailto:contact@pyfesports.com"
+              href="mailto:pyfesports@gmail.com"
               className="inline-block px-8 py-3 bg-[#017bbd] hover:bg-[#0194e4] rounded-xl text-white transition"
             >
               Send Email
@@ -82,24 +82,6 @@ const Contact = () => {
               Visit Site
             </a>
           </motion.div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24 text-center bg-slate-800/40">
-          <h2 className="text-4xl mb-6 text-blue-400">
-            Need <span className="text-slate-900">Assistance?</span>
-          </h2>
-          <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
-            Our team is here to help. Whether it’s technical support, questions about rules, or general inquiries, reach out through Discord or email.
-          </p>
-          <a
-              href="https://discord.gg/YOURDISCORDLINK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-white transition"
-            >
-              Join Discord
-            </a>
         </section>
 
       </div>

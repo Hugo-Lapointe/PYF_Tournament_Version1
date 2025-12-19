@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import BackgroundVideoLayout from "../components/BackgroundVideoLayout";
 
 const standingsData = [
-  { rank: 1, team: "Phoenix Squad", wins: 10, losses: 2, points: 30 },
-  { rank: 2, team: "Shadow Strike", wins: 9, losses: 3, points: 27 },
-  { rank: 3, team: "Valor Vortex", wins: 8, losses: 4, points: 24 },
-  { rank: 4, team: "Rapid Fire", wins: 7, losses: 5, points: 21 },
-  { rank: 5, team: "Night Owls", wins: 6, losses: 6, points: 18 },
-  { rank: 6, team: "Crimson Tide", wins: 5, losses: 7, points: 15 },
+  { rank: 1, team: "Coming Soon", wins: 0, losses: 0, points: 0 },
+  { rank: 2, team: "Coming Soon", wins: 0, losses: 0, points: 0 },
+  { rank: 3, team: "Coming Soon", wins: 0, losses: 0, points: 0 },
+  { rank: 4, team: "Coming Soon", wins: 0, losses: 0, points: 0 },
+  { rank: 5, team: "Coming Soon", wins: 0, losses: 0, points: 0 },
+  { rank: 6, team: "Coming Soon", wins: 0, losses: 0, points: 0 },
 ];
 
 const getBadgeColor = (rank) => {

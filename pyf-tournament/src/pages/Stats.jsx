@@ -4,21 +4,21 @@ import BackgroundVideoLayout from "../components/BackgroundVideoLayout";
 
 // Sample data
 const topPlayers = [
-  { name: "AcePlayer", team: "Phoenix Squad", kills: 250, deaths: 80, kd: 3.13 },
-  { name: "ShadowNinja", team: "Shadow Strike", kills: 230, deaths: 90, kd: 2.56 },
-  { name: "ValorQueen", team: "Valor Vortex", kills: 210, deaths: 95, kd: 2.21 },
+  { name: "TBD", team: "1", kills: "N/A", deaths: "N/A", kd: "N/A" },
+  { name: "TBD", team: "2", kills: "N/A", deaths: "N/A", kd: "N/A" },
+  { name: "TBD", team: "3", kills: "N/A", deaths: "N/A", kd: "N/A" },
 ];
 
 const topTeams = [
-  { name: "Phoenix Squad", wins: 10, losses: 2, points: 30 },
-  { name: "Shadow Strike", wins: 9, losses: 3, points: 27 },
-  { name: "Valor Vortex", wins: 8, losses: 4, points: 24 },
+  { name: "TBD", wins: "N/A", losses: "N/A", points: "N/A" },
+  { name: "TBD", wins: "N/A", losses: "N/A", points: "N/A" },
+  { name: "TBD", wins: "N/A", losses: "N/A", points: "N/A" },
 ];
 
 const recentMatches = [
-  { match: "Phoenix Squad vs Shadow Strike", result: "Phoenix Squad Win", score: "13-8" },
-  { match: "Valor Vortex vs Rapid Fire", result: "Valor Vortex Win", score: "13-11" },
-  { match: "Night Owls vs Crimson Tide", result: "Night Owls Win", score: "13-5" },
+  { match: "TBD", result: "", score: "N/A" },
+  { match: "TBD", result: "", score: "N/A" },
+  { match: "TBD", result: "", score: "N/A" },
 ];
 
 const StatsCentral = () => {
@@ -73,7 +73,7 @@ const StatsCentral = () => {
           </div>
           <div className="text-center mt-8">
             <a
-              href="/players"
+              href="/soon"
               className="inline-block px-8 py-3 bg-blue-400 hover:bg-[#0194e4] rounded-xl text-white transition"
             >
               See All Player Stats
@@ -105,7 +105,7 @@ const StatsCentral = () => {
           </div>
           <div className="text-center mt-8">
             <a
-              href="/teams"
+              href="/soon"
               className="inline-block px-8 py-3 bg-blue-400 hover:bg-[#0194e4] rounded-xl text-white transition"
             >
               See All Teams Stats

@@ -2,110 +2,224 @@ import React from "react";
 import { motion } from "framer-motion";
 import BackgroundVideoLayout from "../components/BackgroundVideoLayout";
 
-const SignUps = () => {
+export default function SignUps() {
   return (
     <BackgroundVideoLayout>
       <div className="text-[#017bbd]">
 
         {/* HERO */}
-        <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full h-[40vh] flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative z-10 text-center px-6"
+            className="text-center px-6"
           >
-            <h1 className="text-5xl md:text-6xl mb-4 tracking-wide">
-              Sign <span className="text-slate-900">Up</span>
+            <h1 className="text-5xl md:text-6xl mb-4">
+              PYF Cup <span className="text-slate-900">Official Signup</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              Join the PYF Valorant League! Register your team or squad via Discord.
+              Register to compete in the PYF Valorant Cup. Please ensure all information is accurate.
             </p>
           </motion.div>
         </section>
 
         {/* Divider */}
         <div className="flex justify-center">
-            <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
+          <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
         </div>
 
-        {/* INFO + CTA */}
-        <section className="pb-24 text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl mb-8">
-            How to <span className="text-slate-900">Register</span>
-          </h2>
-          <p className="text-lg mb-6">
-            Our league sign-ups are managed through Discord. This ensures quick communication and easy team registration. 
-            Make sure you have a Discord account before joining.
-          </p>
+        {/* FORM */}
+        <form
+          action="mailto:pyfesports@gmail.com"
+          method="POST"
+          encType="text/plain"
+          className="max-w-4xl mx-auto space-y-10 pb-24 px-6"
+        >
 
-          <div className="flex flex-col md:flex-row justify-center gap-6 mt-12">
-            <a
-              href="https://discord.gg/YOURDISCORDLINK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-10 py-4 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-xl shadow-lg transition"
+          {/* SECTION 1 */}
+          <FormSection title="Player Information">
+            <Input label="Riot ID (e.g. Phoque#PYF)" name="Riot ID" required />
+            <Input label="Discord Username" name="Discord Username" required />
+            <Input label="Age" name="Age" required />
+            <Select
+              label="NA East Servers Only?"
+              name="NA East"
+              options={["Yes", "No"]}
+              required
+            />
+            <Select
+              label="Time Zone"
+              name="Time Zone"
+              options={["EST", "CST", "MST", "PST", "Other"]}
+              required
+            />
+            <Input label="If Other, specify time zone" name="Other Time Zone" />
+          </FormSection>
+
+          {/* SECTION 2 */}
+          <FormSection title="Competitive Information">
+            <Input label="Current Rank" name="Current Rank" required />
+            <Input label="Peak Rank (last 2 acts)" name="Peak Rank" required />
+            <Input label="Account Level" name="Account Level" required />
+            <Input label="Tracker.gg Profile Link" name="Tracker Link" required />
+          </FormSection>
+
+          {/* SECTION 3 */}
+          <FormSection title="Team Captain Interest">
+            <Select
+              label="Interested in Team Captain?"
+              name="Team Captain Interest"
+              options={["Yes", "No", "Already a Captain"]}
+              required
+            />
+            <Select
+              label="Understand captain responsibilities?"
+              name="Captain Agreement"
+              options={["Yes", "No"]}
+              required
+            />
+          </FormSection>
+
+          {/* SECTION 4 */}
+          <FormSection title="Registration Type">
+            <Select
+              label="Registration Type"
+              name="Registration Type"
+              options={[
+                "Full Team (5)",
+                "Partial Team (2-4)",
+                "Solo Player",
+                "Substitute",
+              ]}
+              required
+            />
+            <p>If Solo Player, no need to fill out the 3 fields under</p>
+            <Input label="Team Name (if applicable)" name="Team Name" />
+            <Input label="Team Captain Discord" name="Captain Discord" />
+            <Textarea
+              label="Teammates Riot IDs"
+              name="Teammates"
+            />
+          </FormSection>
+
+          {/* SECTION 5 */}
+          <FormSection title="Availability">
+            <Select
+              label="Available Fridays 7–10 PM EST?"
+              name="Friday Availability"
+              options={["Yes", "No"]}
+              required
+            />
+            <Select
+              label="Available Saturdays if needed?"
+              name="Saturday Availability"
+              options={["Yes", "No"]}
+              required
+            />
+            <Textarea
+              label="Known Unavailable Dates"
+              name="Unavailable Dates"
+            />
+          </FormSection>
+
+          {/* SECTION 6 */}
+          <FormSection title="Competitive Integrity">
+            <Select label="Play on submitted account only?" name="Account Confirmation" options={["Yes", "No"]} required />
+            <Select label="Understand smurfing is banned?" name="Smurf Rule" options={["Yes", "No"]} required />
+            <Select label="Understand penalties?" name="Penalties Agreement" options={["Yes", "No"]} required />
+          </FormSection>
+
+          {/* SECTION 7 */}
+          <FormSection title="League Expectations">
+            <Select label="Matches streamed?" name="Streaming Consent" options={["Yes", "No"]} required />
+            <Select label="Content usage consent?" name="Content Consent" options={["Yes", "No"]} required />
+            <Select label="Roster lock understanding?" name="Roster Lock" options={["Yes", "No"]} required />
+          </FormSection>
+
+          {/* FINAL */}
+          <FormSection title="Final Confirmation">
+            <Checkbox label="I confirm all information is accurate" name="Accuracy Confirmation" required />
+            <Checkbox label="I understand violations may result in penalties" name="Penalty Confirmation" required />
+          </FormSection>
+
+          {/* SUBMIT */}
+          <div className="text-center pt-10">
+            <button
+              type="submit"
+              className="px-12 py-4 bg-[#017bbd] hover:bg-[#0194e4] rounded-xl text-white text-xl shadow-lg transition"
             >
-              Join Discord
-            </a>
-            <a
-              href="/rules"
-              className="px-10 py-4 bg-slate-800 hover:bg-slate-700 rounded-xl text-xl shadow-lg transition"
-            >
-              Read the Rules
-            </a>
+              Submit Registration
+            </button>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.7 }}
-            className="mt-20 text-lg"
-          >
-            <p>Once in the Discord, follow the instructions in <span className="text-slate-900">#sign-up</span> channel to register your team.</p>
-          </motion.div>
-        </section>
-
-        {/* INFO CARDS */}
-        <section className="py-20 grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-slate-800 p-8 rounded-2xl shadow-xl hover:scale-[1.03] transition"
-          >
-            <h3 className="text-2xl mb-3 text-blue-400">Teams & Players</h3>
-            <p className="text-gray-300">Collegiate squads, amateur rosters, and solo players can all register through Discord.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="bg-slate-800 p-8 rounded-2xl shadow-xl hover:scale-[1.03] transition"
-          >
-            <h3 className="text-2xl mb-3 text-blue-400">Fast Registration</h3>
-            <p className="text-gray-300">Complete your team registration in minutes and get added to the next season.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-slate-800 p-8 rounded-2xl shadow-xl hover:scale-[1.03] transition"
-          >
-            <h3 className="text-2xl mb-3 text-blue-400">Support & Guidance</h3>
-            <p className="text-gray-300">Our admins and community managers will help you through the registration process.</p>
-          </motion.div>
-        </section>
-
+        </form>
       </div>
     </BackgroundVideoLayout>
   );
-};
+}
 
-export default SignUps;
+/* ---------- REUSABLE COMPONENTS ---------- */
+
+function FormSection({ title, children }) {
+  return (
+    <section className="bg-slate-800/70 backdrop-blur-md p-8 rounded-2xl shadow-xl">
+      <h2 className="text-2xl text-blue-400 mb-6">{title}</h2>
+      <div className="space-y-4">{children}</div>
+    </section>
+  );
+}
+
+function Input({ label, name, required }) {
+  return (
+    <div>
+      <label className="block mb-1 text-gray-300">{label}</label>
+      <input
+        type="text"
+        name={name}
+        required={required}
+        className="w-full p-3 rounded bg-slate-900 text-white border border-slate-700"
+      />
+    </div>
+  );
+}
+
+function Textarea({ label, name }) {
+  return (
+    <div>
+      <label className="block mb-1 text-gray-300">{label}</label>
+      <textarea
+        name={name}
+        rows="4"
+        className="w-full p-3 rounded bg-slate-900 text-white border border-slate-700"
+      />
+    </div>
+  );
+}
+
+function Select({ label, name, options, required }) {
+  return (
+    <div>
+      <label className="block mb-1 text-gray-300">{label}</label>
+      <select
+        name={name}
+        required={required}
+        className="w-full p-3 rounded bg-slate-900 text-white border border-slate-700"
+      >
+        <option value="">Select</option>
+        {options.map((opt, i) => (
+          <option key={i} value={opt}>{opt}</option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
+function Checkbox({ label, name, required }) {
+  return (
+    <label className="flex items-center gap-3 text-gray-300">
+      <input type="checkbox" name={name} required={required} />
+      {label}
+    </label>
+  );
+}

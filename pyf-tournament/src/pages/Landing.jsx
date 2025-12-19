@@ -6,15 +6,15 @@ import GlowingBalls from "../components/GlowingBalls";
 const teamMembers = [
   {
     name: "TWYL",
-    img: "/images/phoques/TWYL.png",
+    img: "/images/irl/twyl.jpg",
   },
   {
     name: "RAPID",
-    img: "/images/phoques/Rapid.png",
+    img: "/images/irl/anon.jpg",
   },
   {
-    name: "MISO",
-    img: "/images/phoques/anon.png",
+    name: "MR PEAK",
+    img: "/images/irl/mrpeak.jpg",
   },
 ];
 
@@ -142,16 +142,16 @@ export default function Landing() {
             <div className="bg-slate-900/70 backdrop-blur-md p-6 rounded-xl shadow-lg">
               <ul className="space-y-3">
                 <li className="flex justify-between text-blue-400 hover:text-blue-300">
-                  <span className="text-blue-400 hover:text-blue-300">1. Team Alpha</span>
-                  <span className="text-white">12 - 2</span>
+                  <span className="text-blue-400 hover:text-blue-300">Coming Soon</span>
+                  <span className="text-white">TBD</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-blue-400 hover:text-blue-300">2. Team Blaze</span>
-                  <span className="text-white">11 - 3</span>
+                  <span className="text-blue-400 hover:text-blue-300">Coming Soon</span>
+                  <span className="text-white">TBD</span>
                 </li>
                 <li className="flex justify-between text-blue-400 hover:text-blue-300">
-                  <span className="text-blue-400 hover:text-blue-300">3. Team Frost</span>
-                  <span className="text-white">9 - 5</span>
+                  <span className="text-blue-400 hover:text-blue-300">Coming Soon</span>
+                  <span className="text-white">TBD</span>
                 </li>
               </ul>
 
@@ -208,14 +208,7 @@ export default function Landing() {
               <div className="h-full bg-blue-400" style={{ width: "10%" }}></div>
             </div>
 
-            <p className="text-[#1E6091] mt-4">Currently in: PHASE 1 — TESTS</p>
-
-            <Link
-              to="/roadmap"
-              className="inline-block mt-6 bg-slate-800 hover:bg-[#016aa3] px-6 py-3 rounded shadow"
-            >
-              View Full Roadmap
-            </Link>
+            <p className="text-[#1E6091] mt-4">Currently in: PHASE 1 — SIGNUPS</p>
           </section>
 
           <div className="w-20 h-1 bg-blue-900 rounded-full mb-20" />
@@ -243,7 +236,7 @@ export default function Landing() {
           {/*      MEET THE TEAM PREVIEW      */}
           {/* =============================== */}
           <section className="w-full max-w-6xl mb-24 px-4">
-            <h2 className="text-3xl text-center text-slate-900 mb-12">Meet The Admins</h2>
+            <h2 className="text-3xl text-center text-slate-900 mb-12">Meet The Team</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {teamMembers.map((member, i) => (
@@ -281,7 +274,7 @@ export default function Landing() {
             <p className="text-[#1E6091] mb-6">Connect, compete, and grow with the PYF community.</p>
 
             <a
-              href="https://discord.gg/YOURDISCORDLINK"
+              href="https://discord.gg/Kzr9sBMC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-white transition"

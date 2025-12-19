@@ -18,6 +18,8 @@ import Live from "./pages/Live";
 import MeetTheTeam from "./pages/MeetTheTeam";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import Soon from "./pages/Soon";
+import NotFound from "./pages/NotFound";
 
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -41,7 +43,7 @@ function AnimatedRoutes() {
         {/* Public routes */}
         <Route path="/" element={<Landing />} />
         <Route path="/apply" element={<Apply />} />
-        <Route path="/teams" element={<Teams />} />
+        {/* <Route path="/teams" element={<Teams />} /> */}
         <Route path="/players/:id" element={<PlayerDetails />} />
         <Route path="/standings" element={<Standings />} />
         <Route path="/results" element={<Results />} />
@@ -55,6 +57,8 @@ function AnimatedRoutes() {
         <Route path="/meettheteam" element={<MeetTheTeam />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/soon" element={<Soon />} />
+        <Route path="*" element={<NotFound />} />
 
         {/* Admin login */}
         <Route path="/admin-login" element={<AdminLogin />} />

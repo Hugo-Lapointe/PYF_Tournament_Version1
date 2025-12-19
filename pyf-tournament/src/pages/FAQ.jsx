@@ -5,9 +5,20 @@ import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "How do I register my team?",
+    question: "How do I sign-up?",
     answer:
-      "All team registrations are done via our Discord. Join the server and follow instructions in the #sign-up channel.",
+      (
+        <>
+          To join the league, head over to our{" "}
+          <a
+            href="/signups"
+            className="text-blue-400 hover:underline font-medium"
+          >
+            Sign Up
+          </a>{" "}
+          page and follow the instructions to register yourself.
+        </>
+      ),
   },
   {
     question: "Can solo players join?",
@@ -22,12 +33,24 @@ const faqs = [
   {
     question: "What is the match format?",
     answer:
-      "Most matches are best-of-3, following standard Valorant competitive rules. Some special events may vary.",
+      "Most matches are best-of-1, following standard Valorant competitive rules. Some special events may vary.",
   },
   {
     question: "How can I watch live matches?",
     answer:
-      "All live matches are streamed on our official Twitch channel. Check the Live Matches page for links.",
+      (
+        <>
+          All live matches are streamed on our official{" "}
+          <a
+            href="https://www.twitch.tv/pyfesports"
+            target="_blank"
+            className="text-blue-400 hover:underline font-medium"
+          >
+            Twitch
+          </a>{" "}
+          channel. Check the Live Matches page for links.
+        </>
+      ),
   },
 ];
 
@@ -122,15 +145,12 @@ const FAQ = () => {
             Still have <span className="text-slate-900">Questions?</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
-            Join our Discord server to ask questions, get support, or connect with the community.
-          </p>
+            Visit our Contact page to reach us by email or connect with us on Discord.          </p>
           <a
-            href="https://discord.gg/YOURDISCORDLINK"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="inline-block bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded text-white shadow-md"
           >
-            Join Discord
+            Contact Us
           </a>
         </section>
 

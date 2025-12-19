@@ -7,28 +7,21 @@ const teamMembers = [
   {
     name: "TWYL",
     role: "League Founder",
-    img: "/images/phoques/TWYL.png",
+    img: "/images/irl/twyl.jpg",
     discord: "https://discordapp.com/users/maxence",
     twitch: "https://www.twitch.tv/maxence",
   },
   {
     name: "Rapid",
-    role: "Admin & Match Organizer",
-    img: "/images/phoques/Rapid.png",
+    role: "Programmer",
+    img: "/images/irl/anon.jpg",
     discord: "https://discordapp.com/users/alex",
     twitch: "",
   },
   {
-    name: "Lupipi",
-    role: "Caster & Content Creator",
-    img: "/images/phoques/Lupipi.png",
-    discord: "https://discordapp.com/users/sophie",
-    twitch: "https://www.twitch.tv/sophie",
-  },
-  {
     name: "MiniPeak",
-    role: "Community Manager",
-    img: "/images/phoques/MiniPeak.png",
+    role: "Community Manager & Editor",
+    img: "/images/irl/mrpeak.jpg",
     discord: "https://discordapp.com/users/jordan",
     twitch: "",
   },
@@ -57,51 +50,52 @@ const MeetTheTeam = () => {
         </section>
 
         {/* TEAM CARDS */}
-        <section className="pb-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {teamMembers.map((member, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 + i * 0.1 }}
-              className="bg-slate-800/60 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:scale-[1.03] transition"
-            >
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-full h-56 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-2xl text-blue-400 mb-2">{member.name}</h3>
-                <p className="text-gray-300 mb-4">{member.role}</p>
-                <div className="flex justify-center gap-4">
-                  {member.discord && (
-                    <a
-                      href={member.discord}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-[#7289da] transition"
-                      title="Discord"
-                    >
-                      <i className="fa-brands fa-discord text-2xl"></i>
-                    </a>
-                  )}
-                  {member.twitch && (
-                    <a
-                      href={member.twitch}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-[#9146FF] transition"
-                      title="Twitch"
-                    >
-                      <i className="fa-brands fa-twitch text-2xl"></i>
-                    </a>
-                  )}
+        <section className="pb-20 flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl w-full">
+            {teamMembers.map((member, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 + i * 0.1 }}
+                className="bg-slate-800/60 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:scale-[1.03] transition"
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-6 text-center">
+                  <h3 className="text-2xl text-blue-400 mb-2">{member.name}</h3>
+                  <p className="text-gray-300 mb-4">{member.role}</p>
+
+                  <div className="flex justify-center gap-4">
+                    {member.discord && (
+                      <a
+                        href={member.discord}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-[#7289da] transition"
+                      >
+                        <i className="fa-brands fa-discord text-2xl"></i>
+                      </a>
+                    )}
+                    {member.twitch && (
+                      <a
+                        href={member.twitch}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-[#9146FF] transition"
+                      >
+                        <i className="fa-brands fa-twitch text-2xl"></i>
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </section>
 
         {/* CTA */}
@@ -113,7 +107,7 @@ const MeetTheTeam = () => {
             We’re always looking for casters, admins, and community managers to help grow the league. Join our Discord to get involved!
           </p>
           <a
-            href="https://discord.gg/YOURDISCORDLINK"
+            href="https://discord.gg/Kzr9sBMC"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-[#7289da] hover:bg-[#5b6eae] rounded-xl text-white transition"
