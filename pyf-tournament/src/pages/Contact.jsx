@@ -20,7 +20,7 @@ const Contact = () => {
               Contact <span className="text-slate-900">Us</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              Have questions, need support, or want to connect? Reach out via Discord or email.
+              Have questions or need support? Feel free to reach out to us on Discord or by email.            
             </p>
           </motion.div>
         </section>

@@ -54,7 +54,7 @@ export default function Landing() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.4 }}
             >
-              Welcome to the <span className="text-slate-900">PYF Valorant League</span>
+              Welcome to the <span className="text-slate-900">PYF Cup</span>
             </motion.h1>
 
             <motion.p
@@ -63,14 +63,14 @@ export default function Landing() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.4 }}
             >
-              A friendly competitive space for collegiate, community teams and solo players to clash, compete, and dominate.
+              A community driven league giving everyday gamers the true pro experience.            
             </motion.p>
 
             <Link
               to="/signups"
               className="bg-slate-800 hover:bg-[#016aa3] transition px-10 py-4 rounded text-lg shadow-lg"
             >
-              Register Your Team
+              Sign-Up!
             </Link>
           </div>
 
@@ -80,10 +80,10 @@ export default function Landing() {
           {/*        ABOUT MINI SECTION       */}
           {/* =============================== */}
           <div className="max-w-5xl text-center mb-24 px-4">
-            <h2 className="text-3xl text-slate-900 mb-4">What Is The PYF League?</h2>
+            <h2 className="text-3xl text-slate-900 mb-4">What Is The PYF Cup?</h2>
             <p className="text-[#1E6091] text-lg">
-              A competitive Valorant league run by dedicated admins and community members.
-              Open to collegiate teams, friends, and players hungry for competitive experience.
+              The PYF League is a community driven competitive Valorant 
+              league designed to give everyday gamers a true pro style experience. Players compete in structured seasons with organized teams, streamed and casted matches, and meaningful competition that goes beyond ranked play.
             </p>
 
             <Link
@@ -278,7 +278,7 @@ export default function Landing() {
           {/* =============================== */}
           <section className="w-full max-w-4xl text-center px-4 mb-32">
             <h2 className="text-3xl text-slate-900 mb-4">Join the Community</h2>
-            <p className="text-[#1E6091] mb-6">Stay updated, scrim, talk matches, and get support.</p>
+            <p className="text-[#1E6091] mb-6">Connect, compete, and grow with the PYF community.</p>
 
             <a
               href="https://discord.gg/YOURDISCORDLINK"

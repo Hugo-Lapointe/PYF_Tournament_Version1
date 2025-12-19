@@ -31,14 +31,14 @@ export default function Navbar() {
         { label: "Meet the Team", to: "/meettheteam" },
         { label: "Rules", to: "/rules" },
         { label: "FAQ", to: "/faq" },
-        { label: "Contact / Discord", to: "/contact" },
+        { label: "Contact", to: "/contact" },
       ],
     },
     {
       name: "League",
       links: [
         { label: "League Overview", to: "/overview" },
-        { label: "Roadmap", to: "/roadmap" },
+        // { label: "Roadmap", to: "/roadmap" },
         { label: "Standings", to: "/standings" },
         { label: "Live Matches", to: "/live" },
         { label: "Stats Central", to: "/stats" },

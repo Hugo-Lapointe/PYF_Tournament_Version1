@@ -51,7 +51,7 @@ const MeetTheTeam = () => {
               Meet the <span className="text-slate-900">Team</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-[#1E6091]">
-              The organizers, admins, casters, and community managers who make PYF Valorant League possible.
+              The organizers, admins, casters, and community managers who make PYF Valorant Cup possible.
             </p>
           </motion.div>
         </section>

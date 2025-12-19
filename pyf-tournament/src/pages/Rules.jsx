@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaExclamationTriangle } from "react-icons/fa";
+
 
 export default function Rules() {
   return (
@@ -36,119 +38,168 @@ export default function Rules() {
               Tournament <span className="text-slate-900">Rules</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              All official guidelines, procedures, and competitive regulations for the PYF Valorant League.
+              Rules built to create a fair, competitive, and respectful league environment.            
             </p>
           </motion.div>
         </section>
 
         <div className="w-full max-w-3xl space-y-8">
 
-          <Section title="General Conduct">
-            <List
-              items={[
-                "Be cool. Respect players and staff.",
-                "Trash talk is fine, but keep it fun — no racism, harassment, or hate speech.",
-                "No cheating, exploiting, or using anything sketchy. Play fair or get DQ’d.",
-              ]}
-            />
-          </Section>
-
-          <Section title="Participation Rules">
-            <List
-              items={[
-                "Show up on time for your matches — late = forfeit.",
-                "Follow all instructions from staff and referees.",
-                "All tournament details (format, points, map bans) are in #tournament-info.",
-              ]}
-            />
-          </Section>
-
-          <Section title="Penalties">
-            <List
-              items={[
-                "Late to match: Forfeit the round or match.",
-                "Toxic behavior or harassment: Warning → DQ if it keeps up.",
-                "Cheating or exploiting: Immediate DQ and removal from the tournament.",
-              ]}
-            />
-          </Section>
-
-          <Section title="Tournament Overview">
+          <Section title="League Overview">
             <p className="text-gray-300 mb-4">
-              Format: Round Robin → Single-Elimination Playoffs
+              The PYF Cup is a competitive Valorant league designed to provide players with a
+              structured, professional-style league experience.
             </p>
 
-            <p className="text-gray-300 mb-2">Point System:</p>
             <List
               items={[
-                "Win (any kind) = 2 points",
-                "Loss in Overtime = 1 point",
-                "Loss in Regulation = 0 points",
+                "The league prioritizes competitive integrity, fairness, respect, and smooth operations.",
+                "The PYF Cup is operated and administered by PYF staff.",
+                "PYF staff are responsible for scheduling, enforcement, and competitive oversight.",
+              ]}
+            />
+          </Section>
+
+
+          <Section title="Eligibility">
+            <List
+              items={[
+                "Players must compete on their primary Valorant account.",
+                "Smurfing and alternate accounts are not permitted.",
+                "Players must accurately report their Riot ID and current rank.",
+                "Eligible ranks range from Iron 1 to Ascendant 3.",
+                "Ascendant 3 is the maximum eligible rank.",
+                "Players who reach Immortal during the season may continue competing.",
+                "Rank eligibility is evaluated at roster lock.",
+                "PYF staff may allow exceptions when deemed necessary.",
+              ]}
+            />
+          </Section>
+
+
+          <Section title="Player Behaviour & Conduct">
+            <List
+              items={[
+                "All participants must uphold respect, fairness, and sportsmanship.",
+                "Unsportsmanlike conduct, excessive toxicity, or personal attacks are not tolerated.",
+                "Light competitive banter is allowed when respectful.",
+                "Discriminatory, threatening, or humiliating behaviour is prohibited.",
               ]}
             />
 
-            <p className="text-gray-300 mb-2 mt-6">Tiebreakers (in order):</p>
+            <div className="mt-8 bg-red-900/20 border-l-4 border-red-500 rounded-lg p-5 shadow-lg">
+              <div className="flex items-center gap-3 mb-3">
+                <FaExclamationTriangle className="text-red-400 text-xl" />
+                <h3 className="text-xl font-semibold text-red-400">
+                  Zero-Tolerance Behaviour
+                </h3>
+              </div>
+
+              <ul className="list-disc list-inside space-y-2 text-gray-200">
+                <li>Harassment or targeted abuse</li>
+                <li>Discrimination or slurs of any kind</li>
+                <li>Threats, intimidation, or hate speech</li>
+                <li>Sexual comments or suggestive behaviour</li>
+                <li>Encouraging harassment or coordinated abuse</li>
+              </ul>
+            </div>
+
+
+            <p className="text-gray-300 mt-6">
+              Players must bring disputes privately to PYF staff and must not publicly argue
+              or undermine league operations.
+            </p>
+          </Section>
+
+
+          <Section title="Match Format">
+            <p className="text-gray-300 mb-2 font-semibold">Regular Season</p>
+
             <List
               items={[
-                "Round Differential (Rounds Won – Rounds Lost)",
-                "Rounds Won (Most rounds won overall)",
-                "Rounds Lost (Fewest rounds lost overall)",
-                "Tiebreaker Match (if still tied)",
+                "Matches are Best of 1.",
+                "Teams play one scheduled match per week.",
+                "Standard competitive settings and tournament mode are used.",
+                "Failure to field a full roster may result in a forfeit.",
+              ]}
+            />
+
+            <p className="text-gray-300 mt-6 mb-2 font-semibold">Playoffs</p>
+
+            <List
+              items={[
+                "Playoffs determine the PYF Cup Champion.",
+                "Format, seeding, and match types are finalized at roster lock.",
+                "Playoff matches may be Best of 1 or Best of 3.",
+              ]}
+            />
+          </Section>
+
+
+          <Section title="Match Procedures">
+            <List
+              items={[
+                "Players must be ready 10 minutes before match start.",
+                "Matches are played in Valorant Custom Games (Tournament Mode).",
+                "Only technical pauses are allowed.",
+                "One tactical timeout per half per team.",
+                "All-chat and party chat are prohibited.",
+                "Only team voice or approved Discord voice may be used.",
+                "No substitutes allowed once the match starts.",
+                "Disconnects do not warrant restarts unless approved by PYF staff.",
+              ]}
+            />
+          </Section>
+
+
+          <Section title="Standings & Results">
+            <List
+              items={[
+                "Regulation Win: 3 points",
+                "Overtime Win: 2 points",
+                "Overtime Loss: 1 point",
+                "Regulation Loss: 0 points",
+              ]}
+            />
+
+            <p className="text-gray-300 mt-6 mb-2 font-semibold">Tie-Breakers</p>
+
+            <List
+              items={[
+                "Head-to-head record",
+                "Regulation wins",
+                "Round differential",
+                "Overtime wins",
+                "Map differential",
+              ]}
+            />
+          </Section>
+
+          <Section title="Penalties & Enforcement">
+            <List
+              items={[
+                "PYF staff enforce all rules at their discretion.",
+                "Ignorance of the rules is not an acceptable defense.",
+                "Penalties may apply to players, captains, coaches, or teams.",
+              ]}
+            />
+
+            <p className="text-gray-300 mt-6 mb-2 font-semibold">Possible Penalties</p>
+
+            <List
+              items={[
+                "Warnings or suspensions",
+                "Point deductions or match forfeits",
+                "Player or team removal",
+                "Permanent bans for severe violations",
               ]}
             />
 
             <p className="text-gray-300 mt-6">
-              Advancement to Playoffs:
-              <br />
-              1st Place vs 4th Place
-              <br />
-              2nd Place vs 3rd Place
-              <br />
-              Winners face off in the Grand Final: Single-elimination match to determine the champion.
+              Appeals may be submitted through official PYF channels.  
+              All decisions by PYF staff are final.
             </p>
           </Section>
-
-          <Section title="Map Pool & Selection">
-            <p className="mb-4 text-gray-300">All current Valorant maps are in play.</p>
-
-            <p className="mb-2 text-gray-300">Map Selection Process:</p>
-            <List
-              items={[
-                "Teams alternate bans until 1 map remains.",
-                "The team that didn’t make the final ban picks starting side.",
-                "Map bans occur between captains and the spectator in the match lobby.",
-              ]}
-            />
-          </Section>
-
-          <Section title="Match Procedures">
-            <p className="text-gray-300 mb-2">Check-In:</p>
-            <List
-              items={[
-                "Captains must check in 15 min before match.",
-                "Failure to check in may result in forfeit.",
-              ]}
-            />
-
-            <p className="text-gray-300 mb-2 mt-6">Lobby Setup:</p>
-            <List
-              items={[
-                "A custom lobby will be created for each match.",
-                "Captains are invited first, then they invite teammates.",
-                "Teams must be ready to start within 10 minutes.",
-              ]}
-            />
-
-            <p className="text-gray-300 mb-2 mt-6">Disconnects / Tech Issues:</p>
-            <List
-              items={[
-                "If a player disconnects, the round must play out.",
-                "Teams may request a pause (max 10 minutes).",
-                "If issues can’t be resolved, the match is forfeited.",
-              ]}
-            />
-          </Section>
-
         </div>
       </div>
 

@@ -19,7 +19,7 @@ const LeagueOverview = () => {
               League <span className="text-slate-900">Overview</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              Everything you need to know — format, rules, divisions, playoffs, and match flow.
+              A complete overview of the format, rules, divisions, playoffs, and match flow.            
             </p>
           </motion.div>
         </section>
@@ -37,9 +37,9 @@ const LeagueOverview = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
-              { title: "Collegiate Division", desc: "University & college teams competing in structured seasonal play." },
-              { title: "Open Division", desc: "Amateur squads, community teams, and mixed-skill rosters." },
-              { title: "Premier Division", desc: "High-performance teams competing at a semi-pro level." }
+              { title: "Coming Soon", desc: "TBD" },
+              { title: "Coming Soon", desc: "TBD" },
+              { title: "Coming Soon", desc: "TBD" }
             ].map((card, i) => (
               <motion.div
                 key={i}
@@ -49,10 +49,10 @@ const LeagueOverview = () => {
                 transition={{ duration: 0.5 + i * 0.1 }}
                 className="bg-slate-800 p-8 rounded-2xl shadow-xl hover:scale-[1.03] transition"
               >
-                <h3 className="text-2xl mb-3 text-blue-400">
+                <h3 className="text-2xl my-2 text-blue-400 text-center">
                   {card.title}
                 </h3>
-                <p className="text-gray-300">{card.desc}</p>
+                {/* <p className="text-gray-300">{card.desc}</p> */}
               </motion.div>
             ))}
           </div>
@@ -72,7 +72,9 @@ const LeagueOverview = () => {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl mb-3 text-blue-400">Regular Season</h3>
-              <p>Teams play weekly scheduled matches with standings updated live.</p>
+              <p>
+                Teams compete in scheduled weekly matches using Valorant Custom Games, following official PYF Cup match format and procedures.
+              </p>
             </motion.div>
 
             <motion.div
@@ -81,8 +83,10 @@ const LeagueOverview = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl mb-3 text-blue-400">Playoff Bracket</h3>
-              <p>Top teams qualify for a seeded elimination bracket leading to finals weekend.</p>
+              <h3 className="text-2xl mb-3 text-blue-400">Playoffs</h3>
+              <p>
+                Top teams advance to a seeded elimination bracket to determine the PYF Cup champion, with formats and procedures announced prior to playoffs.
+              </p>
             </motion.div>
 
             <motion.div
@@ -91,8 +95,10 @@ const LeagueOverview = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl mb-3 text-blue-400">Broadcasted Games</h3>
-              <p>Featured matches are casted live with highlights and match analysis.</p>
+              <h3 className="text-2xl mb-3 text-blue-400">Match Procedures</h3>
+              <p>
+                All matches follow PYF Cup rules for match setup, in match conduct, communication, and post match reporting, with PYF staff overseeing all competitive rulings.
+              </p>
             </motion.div>
           </div>
         </section>
@@ -103,14 +109,14 @@ const LeagueOverview = () => {
             Join the <span className="text-slate-900">Competition</span>
           </h2>
           <p className="mb-8 text-lg max-w-xl mx-auto">
-            Whether you're a collegiate roster or a community squad — there's a division for you.
+            Ready to compete? Sign up and take part in the PYF Cup.          
           </p>
 
           <a
               href="/signups"
               className="inline-block px-8 py-3 bg-slate-900 hover:bg-[#0194e4] rounded-xl text-white transition"
             >
-              Sign Up
+              Sign Up!
             </a>
         </section>
 

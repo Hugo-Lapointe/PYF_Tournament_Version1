@@ -96,13 +96,13 @@ const Standings = () => {
             Want to See Your Team <span className="text-slate-900">Here?</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
-            Sign up and compete in the next season to climb the leaderboard and earn badges!
+            Sign up and compete in the next season!
           </p>
           <a
             href="/signups"
             className="inline-block px-8 py-3 bg-blue-400 hover:bg-[#0194e4] rounded-xl text-white transition"
           >
-            Join Now
+            SIGN-UP!
           </a>
         </section>
 

@@ -47,7 +47,7 @@ const Live = () => {
               Live <span className="text-slate-900">Matches</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto">
-              Watch ongoing matches, track scores in real-time, and jump into the action.
+              Watch live matches, track scores in real time, and follow the action as it happens.            
             </p>
           </motion.div>
         </section>
@@ -95,7 +95,7 @@ const Live = () => {
         {/* CTA */}
         <section className="py-24 text-center bg-slate-800/40">
           <h2 className="text-4xl mb-6 text-blue-400">
-            Don’t Miss <span className="text-slate-900">The Action</span>
+            Do Not Miss Out<span className="text-slate-900"> On The Action</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg max-w-xl mx-auto">
             Stay tuned for upcoming matches and catch all the live streams directly on our Twitch channel.
